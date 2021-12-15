@@ -1,0 +1,59 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="task_app.category_model_list">
+      <field name="name">Category List</field>
+      <field name="model">task_app.category_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="tasks"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- FORM -->
+
+
+    <record model="ir.ui.view" id="task_app.category_model_form">
+      <field name="name">Category Form</field>
+      <field name="model">task_app.category_model</field>
+      <field name="arch" type="xml">
+        <form string="Category">
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+            <field name="tasks"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="task_app.action_window_category">
+      <field name="name">Category Window</field>
+      <field name="res_model">task_app.category_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="task-app.action_server">
+      <field name="name">task-app server</field>
+      <field name="model_id" ref="model_task-app_task-app"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+  </data>
+</odoo>

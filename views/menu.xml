@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+  <!-- Top menu item -->
+
+    <menuitem name="Task App" id="task_app.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Tasks" id="task_app.menu_tasks" parent="task_app.menu_root"/>
+    <menuitem name="Categories" id="task_app.menu_categories" parent="task_app.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="Tasks" id="task_app.menu_task_list" parent="task_app.menu_tasks"
+              action="task_app.action_window_task"/>
+    <menuitem name="Categories" id="task_app.menu_category_list" parent="task_app.menu_categories"
+              action="task_app.action_window_category"/>
+
+  </data>
+</odoo>
