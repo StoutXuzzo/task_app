@@ -11,6 +11,7 @@
           <field name="is_done"/>
           <field name="active"/>
           <field name ="category"/>
+          <field name="date"/>
         </tree>
       </field>
     </record>
@@ -32,11 +33,13 @@
             <group>
               <field name="name"/>
               <field name ="category"/>
+              <field name="date"/>
             </group>
 
             <group>
               <field name="is_done"/>
               <field name="active"/>
+              
             </group>
           </group>
         </form>
